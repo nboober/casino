@@ -6,8 +6,27 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Fascinate+Inline&display=swap" rel="stylesheet">
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+
+  <!-- Image and text -->
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand title-font" href="/">
+      <%= image_tag("cards.png", size: "30x30", :class =>"d-inline-block align-top") %>
+      Nick && Mick Casino
+    </a>
+
+    <div id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="/users/new">Register <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+
+  </nav>
 
   <body>
     <%= yield %>
