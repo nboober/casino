@@ -40,11 +40,8 @@ ActiveRecord::Schema.define(version: 2019_10_21_163245) do
     t.string "first_name"
     t.string "last_name"
     t.integer "age"
-<<<<<<< HEAD
     t.integer "tokens", default: 100
-=======
-    t.integer "tokens"
->>>>>>> b2d2674fc2916a8b8a6ea359f79dd7efa60d529c
+
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
