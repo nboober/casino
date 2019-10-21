@@ -11,14 +11,14 @@ User.destroy_all
 Play.destroy_all
 Company.destroy_all
 
-getgud.create(name: "Get Good, Inc.", location: "420 Already Good Lane, Germantown, MD 20893")
+getgud = Company.create(name: "Get Good, Inc.", location: "420 Already Good Lane, Germantown, MD 20893")
 
 wordGame = Game.create(name: "Word", cost: 20, winnings: 50, company_id: getgud.id)
 numberGame = Game.create(name: "Number Guesser", cost: 5, winnings: 15, company_id: getgud.id)
 
 
-nick = User.create(first_name: "Nick", last_name: "Boober", 27, tokens: 500)
-mickey = User.create(first_name: "Mickey", last_name: "Partlow", 27, tokens: 500)
+nick = User.create(first_name: "Nick", last_name: "Boober", age: 27, tokens: 500)
+mickey = User.create(first_name: "Mickey", last_name: "Partlow", age: 27, tokens: 500)
 
 play1 = Play.create(user_id: nick.id, games_id: wordGame.id, win: false)
 play2 = Play.create(user_id: mickey.id, games_id: numberGame.id, win: false)

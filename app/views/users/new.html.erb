@@ -1,0 +1,18 @@
+<button><%= link_to "Home", home_path %></button>
+
+<h2>Register</h2>
+
+<%= form_for @user do |f| %>
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name %> <br><br>
+
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %><br><br>
+
+
+  <%= f.label :age %>
+  <%= f.text_field :age %><br/><br/>
+
+  <%= f.submit "Register", :onclick => "alert('Thank You For Registering. You have received 100 tokens on us. Enjoy!!')" %>
+
+<% end %>

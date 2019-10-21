@@ -1,0 +1,8 @@
+<button><%= link_to "Home", home_path %></button>
+
+<h1>All Users</h1>
+
+<% @users.each do |user| %>
+  <%= link_to "#{user.first_name} #{user.last_name}", user_path(user) %><br><br>
+<% end %>
+

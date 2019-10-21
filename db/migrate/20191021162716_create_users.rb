@@ -4,7 +4,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :first_name
       t.string :last_name
       t.integer :age
-      t.integer :tokens
+      t.integer :tokens, :default => 100
 
       t.timestamps
     end

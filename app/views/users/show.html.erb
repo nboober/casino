@@ -1,0 +1,10 @@
+<button><%= link_to "Home", home_path%></button>
+
+<h1><%= "#{@user.first_name} #{@user.last_name}" %></h1>
+
+<h2>Age: <%= @user.age %></h2>
+
+<h2>Total tokens: <%= @user.tokens %></h2>
+
+<button><%= link_to "Edit Profile", edit_user_path(@user)%></button>
+<button><%= link_to "Delete Profile", user_path(@user), method: "delete"%></button>
