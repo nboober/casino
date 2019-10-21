@@ -1,0 +1,24 @@
+<h1>The Word Count</h1>
+<p>can you guess the random word count?</p>
+<%@path = rand(1..3)%>
+<%if @path == 1 %>
+<%@details = "The novel takes place in a provincial Russian setting, primarily on the estates of Stepan Verkhovensky and Varvara Stavrogina. Stepan's son Pyotr is an aspiring revolutionary conspirator who attempts to organise revolutionaries in the area. He considers Varvara's son Nikolai central to his plot, because he thinks that Nikolai lacks sympathy for mankind. Pyotr gathers conspirators such as the philosophising Shigalyov, the suicidal Kirillov and the former military man Virginsky. He schemes to consolidate their loyalty to him and each other by murdering Ivan Shatov, a fellow conspirator. Pyotr plans to have Kirillov, who is committed to killing himself, take credit for the murder in his suicide note. Kirillov complies and Pyotr murders Shatov, but his scheme goes awry. Pyotr escapes, but the remainder of his aspiring revolutionary crew is arrested. In the denouement, Nikolai kills himself, tortured by his own misdeeds."%>
+<%if @path == 2%>
+<%@details = "Poor Folk is an epistolary novel that describes the relationship between the small, elderly official Makar Devushkin and the young seamstress Varvara Dobroselova, remote relatives who write letters to each other. Makar's tender, sentimental adoration for Varvara and her confident, warm friendship for him explain their evident preference for a simple life, although it keeps them in humiliating poverty. An unscrupulous merchant finds the inexperienced girl and hires her as his housewife and guarantor. He sends her to a manor somewhere on a steppe, while Makar alleviates his misery and pain with alcohol.
+
+The story focuses on poor people who struggle with their lack of self-esteem. Their misery leads to the loss of their inner freedom, to dependence on the social authorities, and to the extinction of their individuality. Dostoevsky shows how poverty and dependence are indissolubly aligned with deflection and deformation of self-esteem, combining inward and outerward suffering"%>
+
+<%if @path == 3%>
+<%@details = "Notes from Underground is split into two stylistically different parts, the first essay-like, the second in narrative style. The protagonist and first-person narrator is an unnamed 40-year-old civil servant known as The Underground Man. The only known facts about his situation are that he has quit the service, lives in a basement flat on the outskirts of Saint Petersburg and finances his livelihood from a modest inheritance.
+
+The first part is a record of his thoughts about society and his character. He describes himself as vicious, squalid and ugly; the chief focuses of his polemic are the 'modern human' and his vision of the world, which he attacks severely and cynically, and towards which he develops aggression and vengefulness. He considers his own decline natural and necessary. Although he emphasises that he does not intend to publish his notes for the public, the narrator appeals repeatedly to an ill-described audience, whose questions he tries to address.
+
+In the second part he describes scenes from his life that are responsible for his failure in personal and professional life and in his love life. He tells of meeting old school friends, who are in secure positions and treat him with condescension. His aggression turns inward on to himself and he tries to humiliate himself further. He presents himself as a possible saviour to the poor prostitute Lisa, advising her to reject self-reproach when she looks to him for hope. Dostoevsky added a short commentary saying that although the storyline and characters are fictional, such things were inevitable in contemporary society.
+
+The Underground Man was very influential on philosophers. His alienated existence from the mainstream influenced modernist literature"%>
+<%end%>
+<%end%>
+<%end%>
+<%=@detials%>
+
+<%form_tag%>
