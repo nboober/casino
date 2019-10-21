@@ -1,3 +1,64 @@
 // Place all the styles related to the Games controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.number_guesser_body{
+  background: black;
+  color: #FCE42D;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+.number_guesser_body a{
+  color: #FCE42D;
+  text-decoration: none;
+  height: 100%;
+  width: 100%;
+}
+
+.big_font{
+  font-size: 300px;
+}
+
+.medium_font{
+  font-size: 50px;
+}
+
+.win{
+  animation-name: win;
+  animation-duration: .3s;
+  animation-iteration-count: infinite;
+  height:95vh;
+  width: 100vw;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+
+
+
+.fail{
+  animation-name: fail;
+  animation-duration: .3s;
+  animation-iteration-count: infinite;
+  height:95vh;
+  width: 100vw;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+@keyframes fail {
+  0%   { background-color: red; }
+  49% { background-color: red; }
+  50% { background-color: #000; }
+  99% { background-color: #000; }
+  100% { background-color: red; }
+}
+
+@keyframes win {
+  0%   { background-color: black; }
+  49% { background-color: black; }
+  50% { background-color: blue; }
+  99% { background-color: blue; }
+  100% { background-color: black; }
+}

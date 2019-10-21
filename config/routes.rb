@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   post "/answer", to: "guess#answer"
 
-  get "/welcome", to: "word#welcome"
+  get "/wordwelcome", to: "word#welcome"
 
 
 
