@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
   get "/wordwelcome", to: "word#welcome"
 
-
+post "/wordanswer", to: "word#wordanwser"
 
 
 end
