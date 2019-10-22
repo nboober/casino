@@ -36,6 +36,15 @@ class UsersController < ApplicationController
     redirect_to home_path
   end
 
+  def updater
+    revenue = params[:revenue].to_i
+    tokens = params[:tokens].to_i
+    User.increase_total_revenue(revenue)
+    current_user.increment_tokens(tokens)
+
+    redirect_to home_path
+  end
+
   private
 
   def user_params

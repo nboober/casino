@@ -14,7 +14,7 @@
       <h5 class="card-title">20 Tokens</h5>
       <p class="card-text">Buy 20 Tokens.</p>
       <% if session[:user_id] %>
-        <a href="#" <% current_user.increment_tokens(10)%> <% User.increase_total_revenue(5) %> class="btn btn-primary">$4.99</a>
+        <%= button_to "$4.99", updater_path(revenue: 5, tokens: 20) , method: "POST", :class => "btn btn-primary" %>
 
       <% else %>
         Login to Purchase
@@ -32,7 +32,7 @@
       <h5 class="card-title">50 Tokens</h5>
       <p class="card-text">Buy 50 Tokens.</p>
       <% if session[:user_id] %>
-        <a href="#" class="btn btn-primary">$9.99</a>
+      <%= button_to "$9.99", updater_path(revenue: 10, tokens: 50) , method: "POST", :class => "btn btn-primary" %>
       <% else %>
         Login to Purchase
       <% end %>
@@ -48,7 +48,7 @@
       <h5 class="card-title">100 Tokens</h5>
       <p class="card-text">Buy 100 Tokens.</p>
       <% if session[:user_id] %>
-        <a href="#" class="btn btn-primary">$19.99</a>
+      <%= button_to "$19.99", updater_path(revenue: 20, tokens: 100) , method: "POST", :class => "btn btn-primary" %>
       <% else %>
         Login to Purchase
       <% end %>
@@ -61,10 +61,10 @@
 <div class="card center-text" style="width: 18rem;">
   <%= image_tag("5.png", :class => "card-img-top")  %>
     <div class="card-body">
-      <h5 class="card-title">150 Tokens</h5>
-      <p class="card-text">Buy 150 Tokens.</p>
+      <h5 class="card-title">200 Tokens</h5>
+      <p class="card-text">Buy 200 Tokens.</p>
       <% if session[:user_id] %>
-        <a href="#" class="btn btn-primary">$49.99</a>
+      <%= button_to "$49.99", updater_path(revenue: 50, tokens: 200) , method: "POST", :class => "btn btn-primary" %>
       <% else %>
         Login to Purchase
       <% end %>
