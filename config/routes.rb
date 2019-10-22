@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get "/logout", to: "application#logout"
 
   get '/tokens', to: "application#tokens", as: "tokens"
+
+
   get '/admin', to: "application#admin", as: "admin"
   get '/site_statistics', to: "application#site_statistics", as: "data"
 

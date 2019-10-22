@@ -1,4 +1,4 @@
-<button class="btn btn-outline-dark"><%= link_to "Home", home_path %></button>
+<%= link_to "Home", home_path, :class => "btn btn-outline-dark" %>
 
 <h1 class = "margin-left">Tokens</h1>
 
@@ -14,7 +14,8 @@
       <h5 class="card-title">20 Tokens</h5>
       <p class="card-text">Buy 20 Tokens.</p>
       <% if session[:user_id] %>
-        <a href="#" class="btn btn-primary">$4.99</a>
+        <a href="#" <% current_user.increment_tokens(10)%> <% User.increase_total_revenue(5) %> class="btn btn-primary">$4.99</a>
+
       <% else %>
         Login to Purchase
       <% end %>
