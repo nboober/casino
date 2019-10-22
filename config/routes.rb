@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   resources :users
   get '/', to: "application#home", as: "home"
   get '/tokens', to: "application#tokens", as: "tokens"
+  get '/admin', to: "application#admin", as: "admin"
+  get '/site_statistics', to: "application#site_statistics", as: "data"
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get "/guesswelcome", to: "guess#welcome"
 
