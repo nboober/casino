@@ -13,7 +13,11 @@
     <div class="card-body">
       <h5 class="card-title">20 Tokens</h5>
       <p class="card-text">Buy 20 Tokens.</p>
-      <a href="#" class="btn btn-primary">$4.99</a>
+      <% if session[:user_id] %>
+        <a href="#" class="btn btn-primary">$4.99</a>
+      <% else %>
+        Login to Purchase
+      <% end %>
     </div>
   </div>
 </div>
@@ -26,7 +30,11 @@
     <div class="card-body">
       <h5 class="card-title">50 Tokens</h5>
       <p class="card-text">Buy 50 Tokens.</p>
-      <a href="#" class="btn btn-primary">$9.99</a>
+      <% if session[:user_id] %>
+        <a href="#" class="btn btn-primary">$9.99</a>
+      <% else %>
+        Login to Purchase
+      <% end %>
     </div>
   </div>
 </div>
@@ -38,7 +46,11 @@
     <div class="card-body">
       <h5 class="card-title">100 Tokens</h5>
       <p class="card-text">Buy 100 Tokens.</p>
-      <a href="#" class="btn btn-primary">$19.99</a>
+      <% if session[:user_id] %>
+        <a href="#" class="btn btn-primary">$19.99</a>
+      <% else %>
+        Login to Purchase
+      <% end %>
     </div>
   </div>
 </div>
@@ -50,7 +62,11 @@
     <div class="card-body">
       <h5 class="card-title">150 Tokens</h5>
       <p class="card-text">Buy 150 Tokens.</p>
-      <a href="#" class="btn btn-primary">$49.99</a>
+      <% if session[:user_id] %>
+        <a href="#" class="btn btn-primary">$49.99</a>
+      <% else %>
+        Login to Purchase
+      <% end %>
     </div>
   </div>
 </div>
