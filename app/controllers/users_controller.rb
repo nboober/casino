@@ -41,8 +41,9 @@ class UsersController < ApplicationController
     tokens = params[:tokens].to_i
     User.increase_total_revenue(revenue)
     current_user.increment_tokens(tokens)
+    
 
-    redirect_to home_path
+    redirect_to home_path, notice: "#{tokens} tokens have been added to your account. Thank You for Purchasing!"
   end
 
   private
