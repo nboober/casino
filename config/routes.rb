@@ -4,7 +4,10 @@ Rails.application.routes.draw do
   resources :games
   resources :users
   get '/', to: "application#home", as: "home"
-  get '/login', to: "application#login"
+
+  get "/login", to: "application#login"
+  post "/login", to: "application#process_login"
+  get "/logout", to: "application#logout"
 
   get '/tokens', to: "application#tokens", as: "tokens"
   get '/admin', to: "application#admin", as: "admin"

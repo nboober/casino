@@ -20,15 +20,32 @@
 
     <div id="navbarNav">
       <ul class="navbar-nav ">
+
+    <% if session[:user_id] %>
+
+      <% if current_user.admin %>
+
         <li class="nav-item active">
-          <a class="nav-link" href="/users/new">Register <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/admin">Admin Page <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item active">
-        <a class="nav-link" href="/admin">Admin Page <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item active">
-      <a class="nav-link" href="/login">Login <span class="sr-only">(current)</span></a>
-    </li>
+
+      <% end %>
+        
+        
+          <div">Welcome <%= current_user.first_name.capitalize %></div>
+          <div><%= link_to "Logout", logout_path %></div>
+
+
+        <% else %>
+        
+          <li class="nav-item active">
+            <a class="nav-link" href="/login">Login <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/users/new">Register <span class="sr-only">(current)</span></a>
+          </li>
+
+        <% end %>
       </ul>
     </div>
 
