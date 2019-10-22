@@ -6,4 +6,12 @@ class ApplicationController < ActionController::Base
 
   end
 
+  def login
+
+  end
+
+  def process_login
+    
+  end
+
 end

@@ -20,3 +20,11 @@
 .title-font{
     font-family: 'Fascinate Inline', cursive;
 }
+
+.float-left{
+    float: left;
+}
+
+.float-right{
+    float: right;
+}

@@ -1,6 +1,19 @@
 <button class="btn btn-outline-dark"><%= link_to "Home", home_path%></button>
 
+<% if @user.admin == true %>
+    <h1>***ADMIN***</h1>
+
+    <% else %>
+
+    <h1>***USER***</h1>
+
+<% end %>
+
 <h1><%= "#{@user.first_name} #{@user.last_name}" %></h1>
+
+<h2>Username: <%= @user.username %></h2>
+
+<h2>Password: <%= @user.password %></h2>
 
 <h2>Age: <%= @user.age %></h2>
 
