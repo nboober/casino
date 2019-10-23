@@ -1,5 +1,13 @@
 <%= link_to "Home", home_path, :class => "btn btn-outline-dark" %>
 
+<% if @user.errors.any? %>
+  <ul>
+    <% @user.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
 <h2>Register</h2>
 
 <%= form_for @user do |f| %>
@@ -13,11 +21,11 @@
   <%= f.text_field :username %><br><br>
 
   <%= f.label :password %>
-  <%= f.text_field :password %><br><br>
+  <%= f.password_field :password %><br><br>
 
   <%= f.label :age %>
-  <%= f.text_field :age %><br/><br/>
+  <%= f.number_field :age %><br/><br/>
 
-  <%= f.submit "Register", :onclick => "alert('Thank You For Registering. You have received 100 tokens on us. Enjoy!!')" %>
+  <%= f.submit "Register" %>
 
 <% end %>

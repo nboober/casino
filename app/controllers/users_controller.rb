@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 
+  before_action :authorized, except: [:new]
+
   def index
     @users = User.all
   end
@@ -9,13 +11,20 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.create(user_params)
-
+    @user = User.new(user_params)
+    if @user.valid?
+      session[:user_id] = @user.id
+      @user.save
     redirect_to user_path(@user)
+
+    else
+      render :new
+    end
   end
 
   def show
     @user = User.find(params[:id])
+    flash.now[:notice] = "Thank You For Registering. You have received 100 tokens on us. Enjoy!!"
   end
 
   def edit

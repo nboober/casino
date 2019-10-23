@@ -1,5 +1,7 @@
 class WordController < ApplicationController
     
+    before_action :authorized
+
 
 def welcome
 

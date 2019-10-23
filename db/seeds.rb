@@ -17,8 +17,8 @@ wordGame = Game.create(name: "Word", cost: 20, winnings: 50, company_id: getgud.
 numberGame = Game.create(name: "Number Guesser", cost: 5, winnings: 15, company_id: getgud.id)
 
 
-nick = User.create(first_name: "Nick", last_name: "Boober", age: 27, tokens: 500, username: "nboober", password: "admin", admin: true)
-mickey = User.create(first_name: "Mickey", last_name: "Partlow", age: 27, tokens: 500, username: "mickey", password: "admin", admin: true)
+nick = User.create(first_name: "Nick", last_name: "Boober", age: 27, tokens: 500, username: "nboober", admin: true, password: "admin",)
+mickey = User.create(first_name: "Mickey", last_name: "Partlow", age: 27, tokens: 500, username: "mickey", admin: true, password: "admin")
 
 play1 = Play.create(user_id: nick.id, games_id: wordGame.id, win: false)
 play2 = Play.create(user_id: mickey.id, games_id: numberGame.id, win: false)
