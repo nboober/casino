@@ -1,0 +1,11 @@
+<h1>Results</h1>
+<%if @user_guess == @wordcount%>
+
+<%=link_to "WIN", wordwelcome_path%>
+<%else%>
+
+<%=@wordcount%>
+<%=link_to "LOSS#{params[:wordcount]}", wordwelcome_path,%>
+
+
+<%end%>

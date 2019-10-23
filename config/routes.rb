@@ -16,7 +16,9 @@ Rails.application.routes.draw do
 
   get "/wordwelcome", to: "word#welcome"
 
-post "/wordanswer", to: "word#wordanwser"
+  post "/wordanswer", to: "word#wordanswer"
 
+  post "/wordfinal", to: "word#wordfinal"
 
+  get 'input_count', to: "word#input_count", as: 'input_count'
 end
