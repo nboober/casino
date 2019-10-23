@@ -42,6 +42,11 @@
     margin-left: 15%;
 }
 
+.center-page{
+    width: 100%;
+    text-align: center;
+}
+
 .center-text{
     text-align: center;
 }

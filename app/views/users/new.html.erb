@@ -1,6 +1,6 @@
 <%= link_to "Home", home_path, :class => "btn btn-outline-dark" %>
 
-<div style="width:100%;text-align:center;">
+<div class="center-page">
 <% if @user.errors.any? %>
   <ul>
     <% @user.errors.full_messages.each do |message| %>
