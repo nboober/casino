@@ -10,12 +10,20 @@ class GamesController < ApplicationController
     @game = Game.find(params[:id])
   end
 
-  def decrementer
+  def decrementerguess
 
     tokens = params[:tokens].to_i
     current_user.decrement_tokens(tokens)
 
     redirect_to guesswelcome_path
+  end
+
+  def decrementerword
+
+    tokens = params[:tokens].to_i
+    current_user.decrement_tokens(tokens)
+
+    redirect_to wordwelcome_path
   end
 
 end

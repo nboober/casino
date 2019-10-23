@@ -10,12 +10,12 @@
   <%= image_tag("roulette.jpg", :class => "card-img-top")  %>
     <div class="card-body">
       <h5 class="card-title">Number Guesser</h5>
-      <p class="card-text">Requires 50 Tokens</p>
+      <p class="card-text">Requires 20 Tokens</p>
       <% if current_user %>
 
-        <% if current_user.tokens >= 50 %>
+        <% if current_user.tokens >= 20 %>
 
-          <%= link_to "Play", guesswelcome_path , :class => "btn btn-primary" %>  
+          <%= link_to "Play", decrementerguess_path(tokens: 20) , method: "POST", :class => "btn btn-primary" %>  
         
         <% else %>
 
@@ -46,7 +46,7 @@
 
         <% if current_user.tokens >= 50 %>
 
-          <%= link_to "Play", wordwelcome_path , :class => "btn btn-primary" %>  
+        <%= link_to "Play", decrementerword_path(tokens: 50) , method: "POST", :class => "btn btn-primary" %>  
         
         <% else %>
 
