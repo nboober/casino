@@ -1,4 +1,13 @@
-<button class="btn btn-outline-dark"><%= link_to "Home", home_path %></button>
+<%= link_to "Home", home_path, :class => "btn btn-outline-dark" %>
+
+<div class="center-page">
+<% if @user.errors.any? %>
+  <ul>
+    <% @user.errors.full_messages.each do |message| %>
+      <li style="list-style-type:none;"><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
 
 <h2>Register</h2>
 
@@ -9,10 +18,17 @@
   <%= f.label :last_name %>
   <%= f.text_field :last_name %><br><br>
 
+  <%= f.label :username %>
+  <%= f.text_field :username %><br><br>
+
+  <%= f.label :password %>
+  <%= f.password_field :password %><br><br>
 
   <%= f.label :age %>
-  <%= f.text_field :age %><br/><br/>
+  <%= f.number_field :age, :value => 0 %><br/><br/>
 
-  <%= f.submit "Register", :onclick => "alert('Thank You For Registering. You have received 100 tokens on us. Enjoy!!')" %>
+  <%= f.submit "Register" %>
 
 <% end %>
+
+</div>

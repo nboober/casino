@@ -1,26 +1,81 @@
-<button class="btn btn-outline-dark"><%= link_to "Home", home_path %></button>
+<%= link_to "Home", home_path, :class => "btn btn-outline-dark" %>
 
-<h1>Tokens</h1>
+<h1 class = "margin-left">Tokens</h1>
 
-<div>
-  <h3>Buy 20 Tokens</h3>
-  <button>$5.00</button>
+<div class="container-fluid"></div>
+<div class="row">
+
+
+<div class="col-sm-2 margin-left">
+
+  <div class="card center-text" style="width: 18rem;">
+  <%= image_tag("1.png", :class => "card-img-top")  %>
+    <div class="card-body">
+      <h5 class="card-title">20 Tokens</h5>
+      <p class="card-text">Buy 20 Tokens.</p>
+      <% if current_user %>
+        <%= button_to "$4.99", updater_path(revenue: 5, tokens: 20) , method: "POST", :class => "btn btn-primary" %>
+
+      <% else %>
+        Login to Purchase
+      <% end %>
+    </div>
+  </div>
 </div>
 
-<div>
-  <h3>Buy 50 Tokens</h3>
-  <button>$10.00</button>
+
+<div class="col-sm-2 margin-left">
+
+<div class="card center-text" style="width: 18rem;">
+  <%= image_tag("3.png", :class => "card-img-top")  %>
+    <div class="card-body">
+      <h5 class="card-title">50 Tokens</h5>
+      <p class="card-text">Buy 50 Tokens.</p>
+      <% if current_user %>
+        <%= button_to "$9.99", updater_path(revenue: 10, tokens: 50) , method: "POST", :class => "btn btn-primary" %>
+      <% else %>
+        Login to Purchase
+      <% end %>
+    </div>
+  </div>
 </div>
 
-<div>
-  <h3>Buy 100 Tokens</h3>
-  <button>$20.00</button>
+<div class="col-sm-2 margin-left">
+
+<div class="card center-text" style="width: 18rem;">
+  <%= image_tag("4.png", :class => "card-img-top")  %>
+    <div class="card-body">
+      <h5 class="card-title">100 Tokens</h5>
+      <p class="card-text">Buy 100 Tokens.</p>
+      <% if current_user %>
+        <%= button_to "$19.99", updater_path(revenue: 20, tokens: 100) , method: "POST", :class => "btn btn-primary" %>
+      <% else %>
+        Login to Purchase
+      <% end %>
+    </div>
+  </div>
 </div>
 
-<div>
-  <h3>Buy 150 Tokens</h3>
-  <button>$50.00</button>
+<div class="col-sm-2 margin-left">
+
+<div class="card center-text" style="width: 18rem;">
+  <%= image_tag("5.png", :class => "card-img-top")  %>
+    <div class="card-body">
+      <h5 class="card-title">200 Tokens</h5>
+      <p class="card-text">Buy 200 Tokens.</p>
+      <% if current_user %>
+        <%= button_to "$49.99", updater_path(revenue: 50, tokens: 200) , method: "POST", :class => "btn btn-primary" %>
+      <% else %>
+        Login to Purchase
+      <% end %>
+    </div>
+  </div>
 </div>
+
+
+
+</div>
+
 
 <br><br>
 

@@ -1,3 +1,15 @@
-<button><%= link_to "Admin Page", admin_path %></button>
-<button><%= link_to "View all Games", games_path %></button>
-<button><%= link_to "Buy Tokens", tokens_path %></button>
+<% if notice %>
+      <div class="notice"><%= notice %></div>
+<% end %>
+
+<div class="container col-lg-8 float-left">
+    <div class = "centered">All Games</div>
+    <%= link_to image_tag("roulette.jpg"), games_path  %>
+    </div>
+
+    <div class="container col-sm-4 float-right">
+    <div class = "centered">Tokens</div>
+    <%= link_to image_tag("tokens.jpg"), tokens_path  %>
+
+</div>
+

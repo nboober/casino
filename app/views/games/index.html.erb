@@ -1,5 +1,67 @@
-<button class="btn btn-outline-dark"><%= link_to "Home", home_path %></button>
+<%= link_to "Home", home_path, :class => "btn btn-outline-dark" %>
 
-<ul>
-  <li><%= link_to "Number Guesser", guesswelcome_path %></li>
-</ul>
+<div class="container-fluid"></div>
+<div class="row">
+
+
+<div class="col-lg-4 more-margin-left">
+
+  <div class="card center-text" style="width: 18rem;">
+  <%= image_tag("roulette.jpg", :class => "card-img-top")  %>
+    <div class="card-body">
+      <h5 class="card-title">Number Guesser</h5>
+      <p class="card-text">Requires 50 Tokens</p>
+      <% if current_user %>
+
+        <% if current_user.tokens >= 50 %>
+
+          <%= link_to "Play", guesswelcome_path , :class => "btn btn-primary" %>  
+        
+        <% else %>
+
+          <%= link_to "Play", tokens_path , :class => "btn btn-primary" %>  
+
+        <% end %>
+
+      <% else %>
+
+        Login to Play
+      
+        <% end %>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="col-lg-4 more-margin-left">
+
+<div class="card center-text" style="width: 18rem;">
+  <%= image_tag("roulette.jpg", :class => "card-img-top")  %>
+    <div class="card-body">
+      <h5 class="card-title">Number Guesser</h5>
+      <p class="card-text">Requires 50 Tokens.</p>
+
+      <% if current_user %>
+
+        <% if current_user.tokens >= 50 %>
+
+          <%= link_to "Play", guesswelcome_path , :class => "btn btn-primary" %>  
+        
+        <% else %>
+
+          <%= link_to "Play", tokens_path , :class => "btn btn-primary" %>  
+
+        <% end %>
+
+      <% else %>
+
+        Login to Play
+      
+        <% end %>
+
+    </div>
+  </div>
+</div>
+
+</div>

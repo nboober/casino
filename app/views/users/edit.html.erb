@@ -1,6 +1,5 @@
-<button class="btn btn-outline-dark"><%= link_to "Home", home_path %></button>
-<button class="btn btn-outline-dark"><%= link_to "Back To Profile", user_path(@user)%></button>
-
+<%= link_to "Home", home_path, :class => "btn btn-outline-dark" %>
+<%= link_to "Back To Profile", user_path(@user), :class => "btn btn-outline-dark" %>
 
 <h2>Edit Profile</h2>
 
