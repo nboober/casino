@@ -20,5 +20,4 @@ Rails.application.routes.draw do
 
   post "/wordfinal", to: "word#wordfinal"
 
-  get 'input_count', to: "word#input_count", as: 'input_count'
 end
