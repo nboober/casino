@@ -15,11 +15,11 @@
 
         <% if current_user.tokens >= 50 %>
 
-          <%= button_to "Play", guesswelcome_path , :class => "btn btn-primary" %>  
+          <%= link_to "Play", guesswelcome_path , :class => "btn btn-primary" %>  
         
         <% else %>
 
-          <%= button_to "Play", tokens_path , :class => "btn btn-primary" %>  
+          <%= link_to "Play", tokens_path , :class => "btn btn-primary" %>  
 
         <% end %>
 
@@ -46,11 +46,11 @@
 
         <% if current_user.tokens >= 50 %>
 
-          <%= button_to "Play", guesswelcome_path , :class => "btn btn-primary" %>  
+          <%= link_to "Play", guesswelcome_path , :class => "btn btn-primary" %>  
         
         <% else %>
 
-          <%= button_to "Play", tokens_path , :class => "btn btn-primary" %>  
+          <%= link_to "Play", tokens_path , :class => "btn btn-primary" %>  
 
         <% end %>
 
