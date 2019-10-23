@@ -1,9 +1,10 @@
 <%= link_to "Home", home_path, :class => "btn btn-outline-dark" %>
 
+<div style="width:100%;text-align:center;">
 <% if @user.errors.any? %>
   <ul>
     <% @user.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
+      <li style="list-style-type:none;"><%= message %></li>
     <% end %>
   </ul>
 <% end %>
@@ -24,8 +25,10 @@
   <%= f.password_field :password %><br><br>
 
   <%= f.label :age %>
-  <%= f.number_field :age %><br/><br/>
+  <%= f.number_field :age, :value => 0 %><br/><br/>
 
   <%= f.submit "Register" %>
 
 <% end %>
+
+</div>

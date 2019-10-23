@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
-  before_action :authorized, except: [:new]
+  before_action :authorized, only: [:index, :show, :edit, :update, :destroy]
+
 
   def index
     @users = User.all
@@ -24,7 +25,6 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    flash.now[:notice] = "Thank You For Registering. You have received 100 tokens on us. Enjoy!!"
   end
 
   def edit
@@ -48,9 +48,8 @@ class UsersController < ApplicationController
   def updater
     revenue = params[:revenue].to_i
     tokens = params[:tokens].to_i
-    User.increase_total_revenue(revenue)
     current_user.increment_tokens(tokens)
-    
+    User.increase_total_revenue(revenue)
 
     redirect_to home_path, notice: "#{tokens} tokens have been added to your account. Thank You for Purchasing!"
   end

@@ -8,15 +8,15 @@ class User < ApplicationRecord
   validates :last_name, presence: true
   validates :password, presence: true
   validates :age, presence: true
-  # validate :age_must_be_valid
+  validate :age_must_be_valid
 
   @@total = 0
 
-  # def age_must_be_valid
-  #   if age < 18
-  #     self.errors.add(:age, “You must be 18 years old or older to use this site.“) 
-  #   end
-  # end
+  def age_must_be_valid
+    if age < 18
+      errors.add(:age, "You must be 18 years old or older to use this site.")
+    end
+  end
 
   def self.total_users
     User.all.length
