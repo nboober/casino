@@ -1,5 +1,6 @@
 <%= link_to "Back to Admin Page", admin_path, :class => "btn btn-outline-dark" %>
 
+<div class="center-page">
 
 <h1>All Users</h1>
 
@@ -7,3 +8,4 @@
   <%= link_to "#{user.first_name} #{user.last_name}", user_path(user) %><br><br>
 <% end %>
 
+</div>
