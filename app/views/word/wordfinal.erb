@@ -1,11 +1,11 @@
 <h1>Results</h1>
 <%if @user_guess == @wordcount%>
-
-<%=link_to "WIN", wordwelcome_path%>
+<% current_user.increment_tokens(100) %>
+<%=link_to "WIN", games_path%>
 <%else%>
 
 <%=@wordcount%>
-<%=link_to "LOSS", wordwelcome_path%>
+<%=link_to "LOSS", games_path%>
 
 
 <%end%>
