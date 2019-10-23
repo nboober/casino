@@ -6,7 +6,7 @@ class User < ApplicationRecord
   validates :username, uniqueness: { case_sensitive: false }
   validates :first_name, presence: true
   validates :last_name, presence: true
-  validates :password, presence: true
+  validates :password_digest, presence: true
   validates :age, presence: true
   validate :age_must_be_valid
 
