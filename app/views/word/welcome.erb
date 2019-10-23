@@ -1,3 +1,5 @@
+<div class="center-page">
+
 <button ><%= link_to "Game Home", games_path %></button>
 <h1>The Word Count</h1>
 <p>can you guess the random word count?</p>
@@ -18,10 +20,11 @@ In the second part he describes scenes from his life that are responsible for hi
 
 The Underground Man was very influential on philosophers. His alienated existence from the mainstream influenced modernist literature"%>
 <%end%>
-
-<%= form_tag "/wordanswer" do %>
+<div class= "word">
+<%= form_tag  "/wordanswer" do %>
   <label>WORDS</label><br>
-  <%= text_area_tag 'words', @details %><br>
+  <%= text_area_tag 'words', @details, :size => "100x25" %><br>
  
   <%= submit_tag "RANDOMIZE!" %>
 <% end %>
+</div>
