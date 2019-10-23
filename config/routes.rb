@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   get '/tokens', to: "application#tokens", as: "tokens"
   post '/updater', to: "users#updater"
+  post '/decrementerguess', to: "games#decrementerguess"
+  post '/decrementerword', to: "games#decrementerword"
 
 
   get '/admin', to: "application#admin", as: "admin"
