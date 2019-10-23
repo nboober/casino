@@ -21,8 +21,8 @@ Rails.application.routes.draw do
   post "/answer", to: "guess#answer"
   
   get "/wordwelcome", to: "word#welcome"
-  post "/wordanswer", to: "word#wordanwser"
-  
+  post "/wordanwser", to: "word#wordanwser"
+  post "/wordfinal",  to: "word#wordfinal"
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
