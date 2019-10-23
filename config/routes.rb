@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   get '/tokens', to: "application#tokens", as: "tokens"
   post '/updater', to: "users#updater"
+  post '/decrementerguess', to: "games#decrementerguess"
+  post '/decrementerword', to: "games#decrementerword"
 
 
   get '/admin', to: "application#admin", as: "admin"
@@ -20,8 +22,9 @@ Rails.application.routes.draw do
   post "/answer", to: "guess#answer"
   
   get "/wordwelcome", to: "word#welcome"
-  post "/wordanswer", to: "word#wordanwser"
-  
-  
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  post "/wordanswer", to: "word#wordanswer"
+
+  post "/wordfinal", to: "word#wordfinal"
+
 end

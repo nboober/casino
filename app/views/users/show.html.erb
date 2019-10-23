@@ -1,5 +1,7 @@
 <%= link_to "Home", home_path, :class => "btn btn-outline-dark" %>
 
+<div class="center-page">
+
 <% if @user.admin == true %>
     <h1>***ADMIN***</h1>
 
@@ -7,6 +9,10 @@
 
     <h1>***USER***</h1>
 
+<% end %>
+
+<% if notice %>
+      <div class="notice"><%= notice %></div>
 <% end %>
 
 <h1><%= "#{@user.first_name} #{@user.last_name}" %></h1>
@@ -19,3 +25,5 @@
 
 <button><%= link_to "Edit Profile", edit_user_path(@user)%></button>
 <button><%= link_to "Delete Profile", user_path(@user), method: "delete"%></button>
+
+</div>

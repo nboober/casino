@@ -1,3 +1,4 @@
+<button ><%= link_to "Game Home", games_path %></button>
 <h1>The Word Count</h1>
 <p>can you guess the random word count?</p>
 <%@path = rand(1..3)%>
@@ -11,14 +12,14 @@ The story focuses on poor people who struggle with their lack of self-esteem. Th
 <%elsif @path == 3%>
 <%@details = "Notes from Underground is split into two stylistically different parts, the first essay-like, the second in narrative style. The protagonist and first-person narrator is an unnamed 40-year-old civil servant known as The Underground Man. The only known facts about his situation are that he has quit the service, lives in a basement flat on the outskirts of Saint Petersburg and finances his livelihood from a modest inheritance.
 
-The first part is a record of his thoughts about society and his character. He describes himself as vicious, squalid and ugly; the chief focuses of his polemic are the 'modern human' and his vision of the world, which he attacks severely and cynically, and towards which he develops aggression and vengefulness. He considers his own decline natural and necessary. Although he emphasises that he does not intend to publish his notes for the public, the narrator appeals repeatedly to an ill-described audience, whose questions he tries to address.
+The first part is a record of his thoughts about society and his character. He describes himself as vicious, squalid and ugly; the chief focuses of his polemic are the 'modern human' and his vision of the world, which he attacks severely and cynically, and towards which he develops aggression and vengefulness. He considers his own decline natural and necessary. Although he emphasises that he does not intend to publish his notes for the public, the narrator appeals repeatedly to an ill-described audience, whose questions he tries to address.@
 
 In the second part he describes scenes from his life that are responsible for his failure in personal and professional life and in his love life. He tells of meeting old school friends, who are in secure positions and treat him with condescension. His aggression turns inward on to himself and he tries to humiliate himself further. He presents himself as a possible saviour to the poor prostitute Lisa, advising her to reject self-reproach when she looks to him for hope. Dostoevsky added a short commentary saying that although the storyline and characters are fictional, such things were inevitable in contemporary society.
 
 The Underground Man was very influential on philosophers. His alienated existence from the mainstream influenced modernist literature"%>
 <%end%>
 
-<%= form_tag wordanswer_path do %>
+<%= form_tag "/wordanswer" do %>
   <label>WORDS</label><br>
   <%= text_area_tag 'words', @details %><br>
  

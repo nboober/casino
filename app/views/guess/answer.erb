@@ -1,9 +1,9 @@
 <div class ="number_guesser_body">
    <%if @number== rand(1..3).to_s%>
   <p class= "win" style="text-align:center;">
+  <% current_user.increment_tokens(50) %>
   
-  
-  <a class = "big_font center" href = "/guesswelcome"><%="WIN"%></a><br>
+  <a class = "big_font center" href = "/games"><%="WIN"%></a><br>
     <span class="medium_font"> You won 15 Tokens!!</span></p>
 
 
@@ -12,7 +12,7 @@
 
   <p class="fail" style="text-align:center; ">
 
-<a class="big_font center" href = "/guesswelcome"><%="FAIL"%></a><br>
+<a class="big_font center" href = "/games"><%="FAIL"%></a><br>
     <span class = "medium_font">You lost 5 tokens :(  Please play again!</span></p>
 
 

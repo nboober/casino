@@ -17,6 +17,11 @@
     margin: 0px;
 }
 
+.field_with_errors{
+    display: inline;
+    color: red;
+}
+
 .title-font{
     font-family: 'Fascinate Inline', cursive;
 }
@@ -31,6 +36,15 @@
 
 .margin-left{
     margin-left: 5%;
+}
+
+.more-margin-left{
+    margin-left: 15%;
+}
+
+.center-page{
+    width: 100%;
+    text-align: center;
 }
 
 .center-text{
@@ -52,4 +66,9 @@
     transform: translate(-50%, -50%);
     z-index: 10;
     font-size: 4vw;
+  }
+
+  .notice{
+      text-align: center;
+      color: red;
   }
