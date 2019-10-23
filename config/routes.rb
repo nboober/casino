@@ -20,17 +20,8 @@ Rails.application.routes.draw do
   post "/answer", to: "guess#answer"
   
   get "/wordwelcome", to: "word#welcome"
-<<<<<<< HEAD
-
-  post "/wordanswer", to: "word#wordanswer"
-
-  post "/wordfinal", to: "word#wordfinal"
-
-  get 'input_count', to: "word#input_count", as: 'input_count'
-=======
-  post "/wordanswer", to: "word#wordanwser"
-  
+  post "/wordanwser", to: "word#wordanwser"
+  post "/wordfinal",  to: "word#wordfinal"
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
->>>>>>> 88423a7ae188b6aad03a7d27b226f435a149b649
 end

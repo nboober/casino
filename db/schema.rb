@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 2019_10_23_130224) do
     t.string "first_name"
     t.string "last_name"
     t.integer "age"
-    t.integer "tokens", default: 100
+    t.integer "tokens"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "username"
