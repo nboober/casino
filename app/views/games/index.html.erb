@@ -46,7 +46,8 @@
 
         <% if current_user.tokens >= 50 %>
 
-          <%= link_to "Play", guesswelcome_path , :class => "btn btn-primary" %>  
+          <%= button_to "Play", decrementer_path(tokens: 50) , method: "POST", :class => "btn btn-primary" %>
+
         
         <% else %>
 
