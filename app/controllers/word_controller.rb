@@ -4,7 +4,7 @@ def welcome
   #displays welcome form, which submits to wordanswer_path
 end
 
-def wordanwser
+def wordanswer
   
   @word = Game.wordchoose(params[:words])
   @wordcount = Game.wordcount
