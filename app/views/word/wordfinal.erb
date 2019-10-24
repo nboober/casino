@@ -4,12 +4,12 @@
 <%if @user_guess == @wordcount%>
 <% current_user.increment_tokens(100) %>
 <%=link_to "WIN", games_path%>
-<p>You Won 100 tokens</p>
+<p class="white-text">You Won 100 tokens</p>
 <%else%>
 
 <p class= "word-color"><%=@wordcount%></p>
 <%=link_to "LOSS", games_path%>
-<p style="color:white;">You Lost 50 tokens</p>
+<p class="white-text">You Lost 50 tokens</p>
 
 <%end%>
 
