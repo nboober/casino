@@ -43,6 +43,8 @@
 }
 
 .center-page{
+
+    background-color: black;
     width: 100%;
     text-align: center;
 }
@@ -77,3 +79,6 @@
       float: center;
   }
 
+  .word-color{
+     color: yellow
+  }

@@ -1,9 +1,9 @@
 <div class="center-page">
 
-<h1><%=@word%></h1>
+<h1 class="word-color"><%=@word%></h1>
 
 <%= form_tag wordfinal_path(@word) do %>
-  <label>HOW-MANY-TIMES-DOES-THE-WORD-APPEAR</label><br>
+  <label class="word-color">HOW-MANY-TIMES-DOES-THE-WORD-APPEAR</label><br>
   <%= number_field_tag 'number' %><br>
 <%=hidden_field_tag :wordcount, "#{@wordcount}"  %>
  <%= submit_tag 'GUESS!' %>
