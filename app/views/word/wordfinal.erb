@@ -1,4 +1,4 @@
-<div class="center-page page-black">
+<div class="center-page page-black padding-top">
 
 <h1 class="word-color">Results</h1>
 <%if @user_guess == @wordcount%>
@@ -9,7 +9,7 @@
 
 <p class= "word-color"><%=@wordcount%></p>
 <%=link_to "LOSS", games_path%>
-<p>You Lost 50 tokens</p>
+<p style="color:white;">You Lost 50 tokens</p>
 
 <%end%>
 
