@@ -54,9 +54,15 @@ class UsersController < ApplicationController
 
     redirect_to home_path, notice: "#{tokens} tokens have been added to your account. Thank You for Purchasing!"
   end
-
+  
   def cashin
+    revenue = params[:revenue].to_i
+    tokens = params[:tokens].to_i
+    current_user.decrement_tokens(tokens)
+    User.decrease_total_revenue(revenue)
+    current_user.increment_cash(revenue)
 
+    redirect_to home_path, notice: "#{tokens} tokens have been cashed in. $#{revenue}.00 has been added to you credit card."
   end
 
   private

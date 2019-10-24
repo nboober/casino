@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   post '/decrementerguess', to: "games#decrementerguess"
   post '/decrementerword', to: "games#decrementerword"
   
-  get '/cash', to: "application#cash", as: "cashin"
+  get '/cash', to: "application#cash"
   post '/cashin', to: "users#cashin"
  
 

@@ -46,6 +46,12 @@ class User < ApplicationRecord
 
   end
 
+  def self.decrease_total_revenue(amount)
+
+    @@total -= amount
+
+  end
+
   def self.total_revenue
 
     return @@total
@@ -62,5 +68,9 @@ class User < ApplicationRecord
     self.save
   end
 
+  def increment_cash(amount)
+    self.cash += amount
+    self.save
+  end
 
 end

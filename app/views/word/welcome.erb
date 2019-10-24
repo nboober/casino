@@ -3,6 +3,8 @@
 <button ><%= link_to "Game Home", games_path %></button>
 <h1>The Word Count</h1>
 <p>can you guess the random word count?</p>
+<p>Read the text and when you are ready select Randomize. </p>
+<p>A random word will be generated. You must enter the correct amount of occerrences for that word to win.</p>
 <%@path = rand(1..3)%>
 <%if @path == 1 %>
 <%@details = "The novel takes place in a provincial Russian setting, primarily on the estates of Stepan Verkhovensky and Varvara Stavrogina. Stepan's son Pyotr is an aspiring revolutionary conspirator who attempts to organise revolutionaries in the area. He considers Varvara's son Nikolai central to his plot, because he thinks that Nikolai lacks sympathy for mankind. Pyotr gathers conspirators such as the philosophising Shigalyov, the suicidal Kirillov and the former military man Virginsky. He schemes to consolidate their loyalty to him and each other by murdering Ivan Shatov, a fellow conspirator. Pyotr plans to have Kirillov, who is committed to killing himself, take credit for the murder in his suicide note. Kirillov complies and Pyotr murders Shatov, but his scheme goes awry. Pyotr escapes, but the remainder of his aspiring revolutionary crew is arrested. In the denouement, Nikolai kills himself, tortured by his own misdeeds."%>
@@ -23,7 +25,7 @@ The Underground Man was very influential on philosophers. His alienated existenc
 <div class= "word">
 <%= form_tag  "/wordanswer" do %>
   <label>WORDS</label><br>
-  <%= text_area_tag 'words', @details, :size => "100x25" %><br>
+  <%= text_area_tag 'words', @details, :size => "100x15" %><br>
  
   <%= submit_tag "RANDOMIZE!" %>
 <% end %>
