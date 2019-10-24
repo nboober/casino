@@ -1,6 +1,6 @@
 <div class="center-page page-black">
 
-<button ><%= link_to "Game Home", games_path %></button>
+<button style="margin-top:2%;margin-bottom:2%;"><%= link_to "Game Home", games_path %></button>
 <h1 class="word-color">The Word Count</h1>
 <p class="word-color">read words then one will be picked at random</p>
 <%@path = rand(1..3)%>
@@ -22,7 +22,7 @@ The Underground Man was very influential on philosophers. His alienated existenc
 <%end%>
 <div class= "word">
 <%= form_tag  "/wordanswer" do %>
-  <label>WORDS</label><br>
+  <label class="white-text">WORDS</label><br>
   <%= text_area_tag 'words', @details, :size => "100x15" %><br>
  
   <%= submit_tag "RANDOMIZE!" %>

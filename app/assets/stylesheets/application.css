@@ -16,6 +16,41 @@
 
  html{
     margin: 0px;
+    background-color:  hsl(65, 16%, 53%);
+}
+
+body{
+    background-color:  hsl(65, 16%, 53%);
+}
+
+.background-black{
+    background-color: hsl(65, 16%, 53%);
+}
+
+.white-text{
+    color:white;
+}
+
+.neon-yellow{
+    background-color: rgb(255, 251, 0);
+}
+
+.position-absolute{
+    position: absolute;
+}
+
+.padding-top{
+    padding-top: 7%;
+}
+
+.margin-top{
+    margin-top: 7%;
+}
+
+.box-shadow-yellow{
+    -webkit-box-shadow: -25px 26px 21px 0px rgb(0, 0, 0);
+    -moz-box-shadow: -25px 26px 21px 0px rgb(0, 0, 0);
+    box-shadow: -25px 26px 21px 0px rgb(0, 0, 0);
 }
 
 .circle{

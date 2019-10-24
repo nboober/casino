@@ -1,15 +1,15 @@
-<div class="center-page">
-<h1>Login</h1>
+<div class="center-page background-black">
+<h1 class="white-text padding-top">Login</h1>
 
 <% if notice %>
     <div><%= notice %></div>
 <% end %>
 
 <%= form_tag "/login" do %>
-<%= label :username, "Username" %>
+<%= label :username, "Username", :class => "white-text"%>
 <%= text_field_tag :username %><br><br>
 
-<%= label :password, "Password" %>
+<%= label :password, "Password", :class => "white-text" %>
 <%= password_field_tag :password %><br><br>
 
 <%= submit_tag "Login" %>
