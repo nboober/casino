@@ -1,48 +1,80 @@
 <%= link_to "Home", home_path, :class => "btn btn-outline-dark" %>
 
-<div class="center-page">
-<% if @user.errors.any? %>
+<div class="center-page" style="width:80%;margin:0 auto;">
+<% if @user.errors.any? || @user.credit_card.errors.any? %>
   <ul>
     <% @user.errors.full_messages.each do |message| %>
+      <li style="list-style-type:none;"><%= message %></li>
+    <% end %>
+    <% @user.credit_card.errors.full_messages.each do |message| %>
       <li style="list-style-type:none;"><%= message %></li>
     <% end %>
   </ul>
 <% end %>
 
+
 <h2>Register</h2>
 
 <%= form_for @user do |f| %>
-  <%= f.label :first_name %>
-  <%= f.text_field :first_name %> <br><br>
 
-  <%= f.label :last_name %>
-  <%= f.text_field :last_name %><br><br>
+  <div class="form-group row">
+    <div class="col-sm-4">
+      <%= f.label :first_name %>
+      <%= f.text_field :first_name, :class => "form-control"%>
+      </div>
+      
+      <div class="col-sm-4">
+      <%= f.label :last_name %>
+      <%= f.text_field :last_name, :class => "form-control" %>
+      </div>
 
-  <%= f.label :username %>
-  <%= f.text_field :username %><br><br>
+      <div class="col-sm-4">
+        <%= f.label :age %>
+        <%= f.number_field :age, :value => 0, :class => "form-control" %>
+      </div>
+  </div>
 
-  <%= f.label :password %>
-  <%= f.password_field :password %><br><br>
+  <div  class="form-group row" >
+    <div class="col-sm-5" style="margin:0 auto;">
+      <%= f.label :username %>
+      <%= f.text_field :username, :class => "form-control" %>
+    </div>
 
-  <%= f.label :age %>
-  <%= f.number_field :age, :value => 0 %><br/><br/>
+    <div class="col-sm-5 center-content" >
+      <%= f.label :password %>
+      <%= f.password_field :password, :class => "form-control" %>
+    </div>
+  </div>
+
+  <h2>Credit Card Information</h2>
 
    <%= f.fields_for :credit_card do |card| %>
-     <%= card.label :cardnumber %>
-     <%= card.text_field :cardnumber %><br>
-  
+  <div class="form-group row">
+    <div class="col-sm-8 center-content">
+      <%= card.label :cardnumber %>
+      <%= card.number_field :cardnumber, :class => "form-control" %>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-sm-4">
      <%= card.label :expmonth %>
-     <%= card.text_field :expmonth %><br>
-  
+     <%= card.number_field :expmonth, :class => "form-control" %>
+    </div>
+
+    <div class="col-sm-4">
      <%= card.label :expyear %>
-     <%= card.text_field :expyear %><br>
-  
-     <%= card.label :securitycode %>
-     <%= card.text_field :securitycode %><br>
-  
+     <%= card.number_field :expyear, :class => "form-control" %>
+    </div>
+
+     <div class="col-sm-4">
+      <%= card.label :securitycode %>
+      <%= card.number_field :securitycode, :class => "form-control" %>
+     </div>
+  </div>
    <% end %>
 
-  <%= f.submit "Register"%>
+  <%= f.submit "Register" %>
 
 <% end %>
 
