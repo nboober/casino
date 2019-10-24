@@ -18,6 +18,10 @@
     margin: 0px;
 }
 
+.circle{
+    border-radius: 50%;
+}
+
 .field_with_errors{
     display: inline;
     color: red;
@@ -47,7 +51,12 @@
     margin-left: 15%;
 }
 
+.page-black{
+
+ background-color: black;}
 .center-page{
+
+   
     width: 100%;
     text-align: center;
 }
@@ -86,3 +95,6 @@
       float: center;
   }
 
+  .word-color{
+     color: yellow
+  }
