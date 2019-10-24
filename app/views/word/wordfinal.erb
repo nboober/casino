@@ -1,13 +1,13 @@
-<div class="center-page">
+<div class="center-page page-black">
 
-<h1>Results</h1>
+<h1 class="word-color">Results</h1>
 <%if @user_guess == @wordcount%>
 <% current_user.increment_tokens(100) %>
 <%=link_to "WIN", games_path%>
 <p>You Won 100 tokens</p>
 <%else%>
 
-<%=@wordcount%>
+<p class= "word-color"><%=@wordcount%></p>
 <%=link_to "LOSS", games_path%>
 <p>You Lost 50 tokens</p>
 
