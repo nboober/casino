@@ -1,22 +1,22 @@
 <% if notice %>
-      <div class="notice background-black"><%= notice %></div>
+<div class="notice background-black"><%= notice %></div>
 <% end %>
 
-    <div class="container col-lg-8 float-left">
-    <div class = "centered white-text">All Games</div>
-    <%= link_to image_tag("roulette.jpg"), games_path  %>
-    </div>
+<div class="container col-lg-8 float-left">
+<div class = "centered white-text">All Games</div>
+<%= link_to image_tag("roulette.jpg"), games_path  %>
+</div>
 
-    <div>
-        <div class="container col-sm-4 float-right">
-            <div class = "centered white-text">Tokens</div>
-            <%= link_to image_tag("tokens.jpg"), tokens_path  %>
-        </div>
+<div>
+  <div class="container col-sm-4 float-right">
+      <div class = "centered white-text">Tokens</div>
+      <%= link_to image_tag("tokens.jpg", class: "circle"), tokens_path%>
+  </div>
 
-        <div class="container col-sm-4 float-right">
-            <div class = "centered white-text">Cash In</div>
-            <%= link_to image_tag("money.jpg"), cash_path  %>
-        </div>
+  <div class="container col-sm-4 float-right ">
+      <div class = "centered white-text">Cash In</div>
+      <%= link_to image_tag("money.jpg", class: "circle"), cash_path  %>
+  </div>
 
-    </div>
+</div>
 
