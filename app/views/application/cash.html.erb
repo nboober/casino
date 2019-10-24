@@ -1,0 +1,81 @@
+<%= link_to "Home", home_path, :class => "btn btn-outline-dark" %>
+
+<h1 class = "margin-left">Cash</h1>
+
+<div class="container-fluid"></div>
+<div class="row">
+
+
+<div class="col-sm-2 margin-left">
+
+  <div class="card center-text" style="width: 18rem;">
+  <%= image_tag("singledollarsign.jpg", :class => "card-img-top")  %>
+    <div class="card-body">
+      <h5 class="card-title">Get $3.00</h5>
+      <p class="card-text">Turn in 20 Tokens</p>
+      <% if current_user && current_user.cash > 0%>
+        <%= button_to "$3.00", cashin_path(revenue: 3, tokens: 20) , method: "POST", :class => "btn btn-primary" %>
+
+      <% else %>
+        <p class="red-font">Login to Cash In Tokens or Get More Tokens</p>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+<div class="col-sm-2 margin-left">
+
+<div class="card center-text" style="width: 18rem;">
+  <%= image_tag("doubledollarsign.jpeg", :class => "card-img-top")  %>
+    <div class="card-body">
+      <h5 class="card-title">Get $7.00</h5>
+      <p class="card-text">Turn in 50 Tokens</p>
+      <% if current_user && current_user.cash > 0 %>
+        <%= button_to "$7.00", cashin_path(revenue: 7, tokens: 50) , method: "POST", :class => "btn btn-primary" %>
+      <% else %>
+      <p class="red-font">Login to Cash In Tokens or Get More Tokens</p>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="col-sm-2 margin-left">
+
+<div class="card center-text" style="width: 18rem;">
+  <%= image_tag("3dollarsigns.png", :class => "card-img-top")  %>
+    <div class="card-body">
+      <h5 class="card-title">Get $15.00</h5>
+      <p class="card-text">Turn in 100 Tokens</p>
+      <% if current_user && current_user.cash > 0 %>
+        <%= button_to "$15.00", cashin_path(revenue: 15, tokens: 100) , method: "POST", :class => "btn btn-primary" %>
+      <% else %>
+      <p class="red-font">Login to Cash In Tokens or Get More Tokens</p>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="col-sm-2 margin-left">
+
+<div class="card center-text" style="width: 18rem;">
+  <%= image_tag("moneyface.jpg", :class => "card-img-top")  %>
+    <div class="card-body">
+      <h5 class="card-title">Get $40.00</h5>
+      <p class="card-text">Turn in 200 Tokens</p>
+      <% if current_user && current_user.cash > 0 %>
+        <%= button_to "$40.00", cashin_path(revenue: 40, tokens: 200) , method: "POST", :class => "btn btn-primary" %>
+      <% else %>
+      <p class="red-font">Login to Cash In Tokens or Get More Tokens</p>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+<br><br>
+

@@ -16,9 +16,11 @@ getgud = Company.create(name: "Get Good, Inc.", location: "420 Already Good Lane
 wordGame = Game.create(name: "Word", cost: 20, winnings: 50, company_id: getgud.id)
 numberGame = Game.create(name: "Number Guesser", cost: 5, winnings: 15, company_id: getgud.id)
 
-
-nick = User.create(first_name: "Nick", last_name: "Boober", age: 27, tokens: 500, username: "nboober", admin: true, password: "admin",)
-mickey = User.create(first_name: "Mickey", last_name: "Partlow", age: 27, tokens: 500, username: "mickey", admin: true, password: "admin")
+nick = User.create(first_name: "Nick", last_name: "Boober", age: 27, tokens: 500, username: "nboober", admin: true, password: "admin", cash: 0)
+mickey = User.create(first_name: "Mickey", last_name: "Partlow", age: 27, tokens: 500, username: "mickey", admin: true, password: "admin", cash: 0)
 
 play1 = Play.create(user_id: nick.id, games_id: wordGame.id, win: false)
 play2 = Play.create(user_id: mickey.id, games_id: numberGame.id, win: false)
+
+creditcard1 = CreditCard.create(cardnumber: 1234567812345678, expmonth: 2, expyear: 2023, securitycode: 012, user_id: nick.id)
+creditcard1 = CreditCard.create(cardnumber: 8765432187654321, expmonth: 5, expyear: 2025, securitycode: 123, user_id: mickey.id)

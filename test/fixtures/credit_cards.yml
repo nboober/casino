@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cardnumber: 1
+  expmonth: 1
+  expyear: 1
+  securitycode: 1
+
+two:
+  cardnumber: 1
+  expmonth: 1
+  expyear: 1
+  securitycode: 1

@@ -17,7 +17,7 @@
         <%= button_to "$4.99", updater_path(revenue: 5, tokens: 20) , method: "POST", :class => "btn btn-primary" %>
 
       <% else %>
-        Login to Purchase
+        <p class="red-font">Login to Purchase</p>
       <% end %>
     </div>
   </div>
@@ -34,7 +34,7 @@
       <% if current_user %>
         <%= button_to "$9.99", updater_path(revenue: 10, tokens: 50) , method: "POST", :class => "btn btn-primary" %>
       <% else %>
-        Login to Purchase
+      <p class="red-font">Login to Purchase</p>
       <% end %>
     </div>
   </div>
@@ -50,7 +50,7 @@
       <% if current_user %>
         <%= button_to "$19.99", updater_path(revenue: 20, tokens: 100) , method: "POST", :class => "btn btn-primary" %>
       <% else %>
-        Login to Purchase
+      <p class="red-font">Login to Purchase</p>
       <% end %>
     </div>
   </div>
@@ -66,7 +66,7 @@
       <% if current_user %>
         <%= button_to "$49.99", updater_path(revenue: 50, tokens: 200) , method: "POST", :class => "btn btn-primary" %>
       <% else %>
-        Login to Purchase
+      <p class="red-font">Login to Purchase</p>
       <% end %>
     </div>
   </div>
