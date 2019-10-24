@@ -10,13 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_23_130224) do
+ActiveRecord::Schema.define(version: 2019_10_24_135916) do
 
   create_table "companies", force: :cascade do |t|
     t.string "name"
     t.string "location"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "credit_cards", force: :cascade do |t|
+    t.integer "cardnumber"
+    t.integer "expmonth"
+    t.integer "expyear"
+    t.integer "securitycode"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
   end
 
   create_table "games", force: :cascade do |t|
@@ -40,12 +50,13 @@ ActiveRecord::Schema.define(version: 2019_10_23_130224) do
     t.string "first_name"
     t.string "last_name"
     t.integer "age"
-    t.integer "tokens"
+    t.integer "tokens", default: 100
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "username"
     t.boolean "admin", default: false
     t.string "password_digest"
+    t.integer "cash", default: 0
   end
 
 end

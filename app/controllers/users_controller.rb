@@ -9,15 +9,16 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
+    @credit_card = CreditCard.new
+    @credit_card.user = @user
   end
 
   def create
     @user = User.new(user_params)
     if @user.valid?
-      session[:user_id] = @user.id
       @user.save
-    redirect_to user_path(@user)
-
+      session[:user_id] = @user.id
+      redirect_to user_path(@user), notice: "Thank you for registering. Here is 100 tokens on us!"
     else
       render :new
     end
@@ -53,10 +54,28 @@ class UsersController < ApplicationController
 
     redirect_to home_path, notice: "#{tokens} tokens have been added to your account. Thank You for Purchasing!"
   end
+  
+  def cashin
+    revenue = params[:revenue].to_i
+    tokens = params[:tokens].to_i
+    current_user.decrement_tokens(tokens)
+    User.decrease_total_revenue(revenue)
+    current_user.increment_cash(revenue)
+
+    redirect_to home_path, notice: "#{tokens} tokens have been cashed in. $#{revenue}.00 has been added to you credit card."
+  end
 
   private
 
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :age, :username, :password)
+    params.require(:user).permit(
+      :first_name, :last_name, :age, :username, :password,
+      credit_card_attributes:[
+        :cardnumber,
+        :expmonth,
+        :expyear,
+        :securitycode,
+        :user_id
+      ])
   end
 end
