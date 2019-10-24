@@ -1,6 +1,9 @@
 <%= link_to "Home", home_path, :class => "btn btn-outline-dark" %>
 
 <div class="center-page">
+<% if notice %>
+      <div class="notice"><%= notice %></div>
+<% end %>
 
 <% if @user.admin == true %>
     <h1>***ADMIN***</h1>
@@ -11,9 +14,6 @@
 
 <% end %>
 
-<% if notice %>
-      <div class="notice"><%= notice %></div>
-<% end %>
 
 <h1><%= "#{@user.first_name} #{@user.last_name}" %></h1>
 
@@ -21,7 +21,13 @@
 
 <h2>Age: <%= @user.age %></h2>
 
-<h2>Total tokens: <%= @user.tokens %></h2>
+<h2>Total tokens: <%= @user.tokens %></h2><br>
+
+<h3>**Card Information**</h3><br>
+<h3>Card Number: <%= @user.credit_card.cardnumber %></h3>
+<h3>Exp Month: <%= @user.credit_card.expmonth %></h3>
+<h3>Exp Year: <%= @user.credit_card.expyear %></h3>
+<h3>Security Code: <%= @user.credit_card.securitycode %></h3>
 
 <button><%= link_to "Edit Profile", edit_user_path(@user)%></button>
 <button><%= link_to "Delete Profile", user_path(@user), method: "delete"%></button>

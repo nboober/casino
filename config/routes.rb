@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :credit_cards
   resources :plays
   resources :companies
   resources :games
@@ -13,6 +14,10 @@ Rails.application.routes.draw do
   post '/updater', to: "users#updater"
   post '/decrementerguess', to: "games#decrementerguess"
   post '/decrementerword', to: "games#decrementerword"
+  
+  get '/cash', to: "application#cash", as: "cashin"
+  post '/cashin', to: "users#cashin"
+ 
 
 
   get '/admin', to: "application#admin", as: "admin"

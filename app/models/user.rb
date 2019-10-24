@@ -2,6 +2,8 @@ class User < ApplicationRecord
   has_secure_password
   has_many :plays
   has_many :games, through: :plays
+  has_one :credit_card, inverse_of: :user
+  accepts_nested_attributes_for :credit_card
   validates :username, presence: true
   validates :username, uniqueness: { case_sensitive: false }
   validates :first_name, presence: true
