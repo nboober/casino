@@ -20,29 +20,29 @@
   <div class="form-group row">
     <div class="col-sm-4">
       <%= f.label :first_name %>
-      <%= f.text_field :first_name, :class => "form-control"%>
+      <%= f.text_field :first_name, :placeholder => "First Name", :class => "form-control"%>
       </div>
       
       <div class="col-sm-4">
       <%= f.label :last_name %>
-      <%= f.text_field :last_name, :class => "form-control" %>
+      <%= f.text_field :last_name, :placeholder => "Last Name", :class => "form-control" %>
       </div>
 
       <div class="col-sm-4">
         <%= f.label :age %>
-        <%= f.number_field :age, :value => 0, :class => "form-control" %>
+        <%= f.number_field :age, :placeholder => "0", :class => "form-control" %>
       </div>
   </div>
 
   <div  class="form-group row" >
     <div class="col-sm-5" style="margin:0 auto;">
       <%= f.label :username %>
-      <%= f.text_field :username, :class => "form-control" %>
+      <%= f.text_field :username, :placeholder => "Username",:class => "form-control" %>
     </div>
 
     <div class="col-sm-5 center-content" >
       <%= f.label :password %>
-      <%= f.password_field :password, :class => "form-control" %>
+      <%= f.password_field :password, :placeholder => "Password", :class => "form-control" %>
     </div>
   </div>
 
@@ -52,24 +52,24 @@
   <div class="form-group row">
     <div class="col-sm-8 center-content">
       <%= card.label :cardnumber %>
-      <%= card.number_field :cardnumber, :class => "form-control" %>
+      <%= card.number_field :cardnumber, :placeholder => "0000-0000-0000-0000",:class => "form-control" %>
     </div>
   </div>
 
   <div class="form-group row">
     <div class="col-sm-4">
      <%= card.label :expmonth %>
-     <%= card.number_field :expmonth, :class => "form-control" %>
+     <%= card.number_field :expmonth, :placeholder => "00", :class => "form-control" %>
     </div>
 
     <div class="col-sm-4">
      <%= card.label :expyear %>
-     <%= card.number_field :expyear, :class => "form-control" %>
+     <%= card.number_field :expyear, :placeholder => "0000", :class => "form-control" %>
     </div>
 
      <div class="col-sm-4">
       <%= card.label :securitycode %>
-      <%= card.number_field :securitycode, :class => "form-control" %>
+      <%= card.number_field :securitycode, :placeholder => "000", :class => "form-control" %>
      </div>
   </div>
    <% end %>

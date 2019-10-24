@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Casino</title>
+    <title>Nick && Mick Casino</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -16,8 +16,8 @@
 
   <!-- Image and text -->
   <nav class="navbar navbar-light">
-    <a class="navbar-brand title-font" href="/">
-      <%= image_tag("cards.png", size: "30x30", :class =>"d-inline-block align-top") %>
+    <a class="navbar-brand title-font" style="font-size:40px;" href="/">
+      <%= image_tag("cards.png", size: "50x50", :class =>"d-inline-block align-top") %>
       Nick && Mick Casino
     </a>
 
@@ -37,7 +37,7 @@
         
           <div>Welcome <%= link_to current_user.first_name.capitalize, user_path(current_user.id) %></div>
           <div>Tokens: <%= current_user.tokens %></div>
-          <div>My Cash: $<%= current_user.cash %>.00</div>
+          <div>My Profits: $<%= current_user.cash %>.00</div>
           <a class="nav-link" href="/logout">Logout <span class="sr-only">(current)</span></a>
 
         <% else %>
