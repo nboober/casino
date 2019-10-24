@@ -140,5 +140,8 @@ border: 1px solid #181717 !important;
   }
 
   .word-color{
-     color: yellow
+     color: yellow;
   }
+.loss-word{
+    color: black;
+}
