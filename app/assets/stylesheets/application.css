@@ -16,11 +16,15 @@
 
  html{
     margin: 0px;
-    background-color: black;
+    background-color:  hsl(65, 16%, 53%);
+}
+
+body{
+    background-color:  hsl(65, 16%, 53%);
 }
 
 .background-black{
-    background-color: black;
+    background-color: hsl(65, 16%, 53%);
 }
 
 .white-text{
@@ -44,9 +48,9 @@
 }
 
 .box-shadow-yellow{
-    -webkit-box-shadow: -25px 26px 21px 0px rgba(231,237,55,1);
-    -moz-box-shadow: -25px 26px 21px 0px rgba(231,237,55,1);
-    box-shadow: -25px 26px 21px 0px rgba(231,237,55,1);
+    -webkit-box-shadow: -25px 26px 21px 0px rgb(0, 0, 0);
+    -moz-box-shadow: -25px 26px 21px 0px rgb(0, 0, 0);
+    box-shadow: -25px 26px 21px 0px rgb(0, 0, 0);
 }
 
 .circle{

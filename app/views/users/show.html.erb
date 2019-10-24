@@ -1,8 +1,8 @@
 <%= link_to "Home", home_path, :class => "btn btn-outline-dark btn btn-outline-dark btn-light position-absolute" %>
 
-<div class="center-page">
+<div class="center-page background-black white-text" style="padding-top:2%;">
 <% if notice %>
-      <div class="notice"><%= notice %></div>
+      <div class="notice background-black"><%= notice %></div>
 <% end %>
 
 <% if @user.admin == true %>

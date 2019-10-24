@@ -1,6 +1,6 @@
 <%= link_to "Home", home_path, :class => "btn btn-outline-dark btn btn-outline-dark btn-light position-absolute" %>
-
-<div class="center-page" style="width:80%;margin:0 auto;">
+<div class="background-black white-text">
+<div class="center-page background-black " style="width:80%;padding-left:5%;margin:0 auto;">
 <% if @user.errors.any? || @user.credit_card.errors.any? %>
   <ul>
     <% @user.errors.full_messages.each do |message| %>
@@ -78,4 +78,5 @@
 
 <% end %>
 
+</div>
 </div>
