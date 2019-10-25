@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_24_135916) do
+ActiveRecord::Schema.define(version: 2019_10_25_143433) do
 
   create_table "companies", force: :cascade do |t|
     t.string "name"
@@ -40,8 +40,7 @@ ActiveRecord::Schema.define(version: 2019_10_24_135916) do
 
   create_table "plays", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "games_id"
-    t.boolean "win"
+    t.integer "game_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -50,7 +49,7 @@ ActiveRecord::Schema.define(version: 2019_10_24_135916) do
     t.string "first_name"
     t.string "last_name"
     t.integer "age"
-    t.integer "tokens"
+    t.integer "tokens", default: 100
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "username"
