@@ -12,7 +12,14 @@ class CompaniesController < ApplicationController
     end
   
     def create
-      @company = Company.create(user_params)
+      @company = Company.new(company_params)
+      if @company.valid?
+        @company.save
+
+        redirect_to company_path(@company)
+      else
+        render :new
+      end
       
     end
   
@@ -40,8 +47,8 @@ class CompaniesController < ApplicationController
   
     private
   
-    def user_params
-      params.require(:user).permit(
+    def company_params
+      params.require(:company).permit(
         :name, :location)
     end
   end
