@@ -45,7 +45,9 @@ class GamesController < ApplicationController
     tokens = params[:tokens].to_i
     current_user.decrement_tokens(tokens)
 
-    
+    game = Game.find_by(name: "Number Guesser")
+
+    Play.create(user_id: current_user.id, game_id: game.id)
 
     redirect_to guesswelcome_path
   end
@@ -54,6 +56,10 @@ class GamesController < ApplicationController
 
     tokens = params[:tokens].to_i
     current_user.decrement_tokens(tokens)
+
+    game = Game.find_by(name: "Word Guesser")
+
+    Play.create(user_id: current_user.id, game_id: game.id)
 
     redirect_to wordwelcome_path
   end
