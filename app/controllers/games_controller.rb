@@ -45,6 +45,8 @@ class GamesController < ApplicationController
     tokens = params[:tokens].to_i
     current_user.decrement_tokens(tokens)
 
+    
+
     redirect_to guesswelcome_path
   end
 
