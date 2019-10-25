@@ -4,10 +4,11 @@
 
 <h1>All Users</h1>
 
-<% @users.each do |user| %>
-  <%= link_to "#{user.first_name} #{user.last_name}", user_path(user) %><br><br>
+<% @companies.each do |company| %>
+  <%= link_to company.name, company_path(company) %><br><br>
 <% end %>
 
-<button><%= link_to "Register New User", new_user_path %></button><br>
+<button><%= link_to "Register New Company", new_company_path %></button><br>
+
 
 </div>

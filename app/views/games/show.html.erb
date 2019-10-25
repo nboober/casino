@@ -1,6 +1,32 @@
-<%= link_to "Back to All Games", games_path, :class => "btn btn-outline-dark btn btn-outline-dark btn-light position-absolute" %>
+<%= link_to "Back to Admin Page", admin_path, :class => "btn btn-outline-dark btn btn-outline-dark btn-light position-absolute" %>
+
+<div class="center-page background-black white-text" style="padding-top:2%;">
+<% if notice %>
+      <div class="notice background-black"><%= notice %></div>
+<% end %>
+
+    <h1 style="color:black;"><%= @game.name %></h1>
+
+<div class="form-group row">
+    <div class="col-sm-4">
+        <h2>Cost: <%= @game.cost %></h2>
+    </div>
+
+    <div class="col-sm-4">
+        <h2>Winnings: <%= @game.winnings %></h2>
+    </div>
+    
+    <div class="col-sm-4">
+        <h2>Owned By: <%= @game.company.name %></h2>
+    </div>
+</div>
 
 
-<h1><%= @game.name %></h1>
 
-<h3>Created By: <%= @game.company.name %></h3>
+    <div class="center-content">
+        <button><%= link_to "Edit Game", edit_game_path(@game)%></button>
+        <button><%= link_to "Delete Game", game_path(@game), method: "delete"%></button>
+    </div>
+</div>
+
+</div>

@@ -31,6 +31,10 @@ body{
     color:white;
 }
 
+.black-text{
+    color: black;
+}
+
 .neon-yellow{
     background-color: rgb(255, 251, 0);
 }
@@ -98,9 +102,7 @@ border: 1px solid #181717 !important;
 .page-black{
 
  background-color: black;}
-.center-page{
-
-   
+.center-page{   
     width: 100%;
     text-align: center;
 }
