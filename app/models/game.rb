@@ -2,6 +2,10 @@ class Game < ApplicationRecord
   belongs_to :company
   has_many :plays
   has_many :users, through: :plays
+  validates :name, presence: true
+  validates :cost, presence: true
+  validates :winnings, presence: true
+
 
 def self.wordchoose(params)
   @details = params

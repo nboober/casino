@@ -1,0 +1,29 @@
+<%= link_to "Back to Admin Page", admin_path, :class => "btn btn-outline-dark btn btn-outline-dark btn-light position-absolute" %>
+
+<div class="center-page background-black white-text" style="padding-top:2%;">
+<% if notice %>
+      <div class="notice background-black"><%= notice %></div>
+<% end %>
+
+    <h1 style="color:black;"><%= @company.name %></h1>
+
+<div class="form-group row">
+    <div class="col-sm-10 center-content">
+        <h2>Location: <%= @company.location %></h2>
+    </div>
+
+    <div class="col-sm-4 center-content padding-top">
+    <h2 class="black-text">Our Games</h2>
+        <% @company.games.each do |game| %>
+            <h2><%= game.name %></h2>
+        <% end %>
+    </div>
+</div>
+
+    <div class="center-content">
+        <button><%= link_to "Edit Company", edit_company_path(@company)%></button>
+        <button><%= link_to "Delete Company", company_path(@company), method: "delete"%></button>
+    </div>
+</div>
+
+</div>
