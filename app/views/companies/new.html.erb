@@ -1,5 +1,5 @@
 <%= link_to "Back to Admin Page", admin_path, :class => "btn btn-outline-dark btn btn-outline-dark btn-light position-absolute" %>
-<div class="background-black white-text">
+<div class="background-black white-text padding-top">
 <div class="center-page background-black " style="width:80%;padding-left:5%;margin:0 auto;">
 <% if @company.errors.any? %>
   <ul>
@@ -15,20 +15,20 @@
 <%= form_for @company do |f| %>
 
   <div class="form-group row">
-    <div class="col-sm-4">
+    <div class="col-sm-6">
       <%= f.label :_name %>
       <%= f.text_field :name, :placeholder => "Name", :class => "form-control"%>
       </div>
       
-      <div class="col-sm-4">
+      <div class="col-sm-6">
       <%= f.label :location %>
       <%= f.text_field :location, :placeholder => "Location", :class => "form-control" %>
-      </div>
+      </div><br><br>
+      
+      <%= f.submit "Create", :class => "center-content" %>
 
-
-  <%= f.submit "Create" %>
-
-<% end %>
+      <% end %>
+      
 
 </div>
 </div>

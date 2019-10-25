@@ -1,5 +1,5 @@
 <%= link_to "Back to Admin Page", admin_path, :class => "btn btn-outline-dark btn btn-outline-dark btn-light position-absolute" %>
-<div class="background-black white-text">
+<div class="background-black white-text padding-top">
 <div class="center-page background-black " style="width:80%;padding-left:5%;margin:0 auto;">
 <% if @game.errors.any? %>
   <ul>
@@ -22,19 +22,20 @@
       
       <div class="col-sm-4">
       <%= f.label :cost %>
-      <%= f.number_field :cost, :placeholder => "cost", :class => "form-control" %>
+      <%= f.number_field :cost, :placeholder => "20", :class => "form-control" %>
       </div>
 
       <div class="col-sm-4">
       <%= f.label :winnings %>
-      <%= f.number_field :winnings, :placeholder => "winnings", :class => "form-control" %>
+      <%= f.number_field :winnings, :placeholder => "50", :class => "form-control" %>
       </div>
      
-      <div class="col-sm-4">
+      <div class="col-sm-12 center-content">
+      <h3>Owned By: </3>
       <%= f.collection_select :company_id, Company.all, :id, :name %>
       </div>
 
-  <%= f.submit "Create" %>
+  <%= f.submit "Create", :class => "center-content margin-top"%>
 
 <% end %>
 

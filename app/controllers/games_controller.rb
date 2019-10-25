@@ -28,7 +28,7 @@ class GamesController < ApplicationController
 
   def update
     @game = Game.find(params[:id])
-    @game.update(user_params)
+    @game.update(game_params)
 
     redirect_to game_path(@game)
   end
@@ -37,7 +37,7 @@ class GamesController < ApplicationController
     @game = Game.find(params[:id])
     @game.destroy
 
-    redirect_to home_path
+    redirect_to admin_path
   end
 
   def decrementerguess

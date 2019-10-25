@@ -42,7 +42,7 @@ class CompaniesController < ApplicationController
       @company = Company.find(params[:id])
       @company.destroy
   
-      redirect_to home_path
+      redirect_to admin_path
     end
   
     private

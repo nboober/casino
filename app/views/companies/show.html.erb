@@ -8,12 +8,12 @@
     <h1 style="color:black;"><%= @company.name %></h1>
 
 <div class="form-group row">
-    <div class="col-sm-4">
+    <div class="col-sm-10 center-content">
         <h2>Location: <%= @company.location %></h2>
     </div>
 
-    <div class="col-sm-4">
-    <h3>Our Games</h3>
+    <div class="col-sm-4 center-content padding-top">
+    <h2 class="black-text">Our Games</h2>
         <% @company.games.each do |game| %>
             <h2><%= game.name %></h2>
         <% end %>
