@@ -1,67 +1,67 @@
 <%= link_to "Home", home_path, :class => "btn btn-outline-dark btn-light position-absolute" %>
 
 <div class="container-fluid"></div>
-<div class="row background-black">
+  <div class="row background-black">
 
 
-<div class="col-lg-4 more-margin-left">
+  <div class="col-lg-4 more-margin-left">
+
+    <div class="card center-text box-shadow-yellow margin-top" style="width: 18rem;">
+    <%= image_tag("numberthree.jpeg", :class => "card-img-top")  %>
+      <div class="card-body">
+        <h5 class="card-title">Number Guesser</h5>
+        <p class="card-text">Requires 20 Tokens</p>
+        <% if current_user %>
+
+          <% if current_user.tokens >= 20 %>
+
+            <%= link_to "Play", decrementerguess_path(tokens: 20) , method: "POST", :class => "btn btn-primary" %>  
+          
+          <% else %>
+
+            <%= link_to "Play", tokens_path , :class => "btn btn-primary" %>  
+
+          <% end %>
+
+        <% else %>
+
+        <p class="red-font">Login to Play</p>
+        
+          <% end %>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col-lg-4 more-margin-left">
 
   <div class="card center-text box-shadow-yellow margin-top" style="width: 18rem;">
-  <%= image_tag("numberthree.jpeg", :class => "card-img-top")  %>
-    <div class="card-body">
-      <h5 class="card-title">Number Guesser</h5>
-      <p class="card-text">Requires 20 Tokens</p>
-      <% if current_user %>
+    <%= image_tag("words.jpeg", :class => "card-img-top")  %>
+      <div class="card-body">
+        <h5 class="card-title">Word Count Guesser</h5>
+        <p class="card-text">Requires 50 Tokens.</p>
 
-        <% if current_user.tokens >= 20 %>
+        <% if current_user %>
 
-          <%= link_to "Play", decrementerguess_path(tokens: 20) , method: "POST", :class => "btn btn-primary" %>  
-        
+          <% if current_user.tokens >= 50 %>
+
+          <%= link_to "Play", decrementerword_path(tokens: 50) , method: "POST", :class => "btn btn-primary" %>  
+          
+          <% else %>
+
+            <%= link_to "Play", tokens_path , :class => "btn btn-primary" %>  
+
+          <% end %>
+
         <% else %>
 
-          <%= link_to "Play", tokens_path , :class => "btn btn-primary" %>  
-
-        <% end %>
-
-      <% else %>
-
-      <p class="red-font">Login to Play</p>
-      
-        <% end %>
-
-    </div>
-  </div>
-</div>
-
-
-<div class="col-lg-4 more-margin-left">
-
-<div class="card center-text box-shadow-yellow margin-top" style="width: 18rem;">
-  <%= image_tag("words.jpeg", :class => "card-img-top")  %>
-    <div class="card-body">
-      <h5 class="card-title">Word Count Guesser</h5>
-      <p class="card-text">Requires 50 Tokens.</p>
-
-      <% if current_user %>
-
-        <% if current_user.tokens >= 50 %>
-
-        <%= link_to "Play", decrementerword_path(tokens: 50) , method: "POST", :class => "btn btn-primary" %>  
+        <p class="red-font">Login to Play</p>
         
-        <% else %>
+          <% end %>
 
-          <%= link_to "Play", tokens_path , :class => "btn btn-primary" %>  
-
-        <% end %>
-
-      <% else %>
-
-      <p class="red-font">Login to Play</p>
-      
-        <% end %>
-
+      </div>
     </div>
   </div>
-</div>
 
 </div>

@@ -5,27 +5,24 @@
       <div class="notice background-black"><%= notice %></div>
 <% end %>
 
-    <h1 style="color:black;"><%= @game.name %></h1>
+    <h1 style="color:black;"><%= @company.name %></h1>
 
 <div class="form-group row">
     <div class="col-sm-4">
-        <h2>Cost: <%= @game.cost %></h2>
+        <h2>Location: <%= @company.location %></h2>
     </div>
 
     <div class="col-sm-4">
-        <h2>Winnings: <%= @game.winnings %></h2>
-    </div>
-    
-    <div class="col-sm-4">
-        <h2>Owned By: <%= @game.company.name %></h2>
+    <h3>Our Games</h3>
+        <% @company.games.each do |game| %>
+            <h2><%= game.name %></h2>
+        <% end %>
     </div>
 </div>
 
-
-
     <div class="center-content">
-        <button><%= link_to "Edit Game", edit_game_path(@game)%></button>
-        <button><%= link_to "Delete Game", game_path(@game), method: "delete"%></button>
+        <button><%= link_to "Edit Company", edit_company_path(@company)%></button>
+        <button><%= link_to "Delete Company", company_path(@company), method: "delete"%></button>
     </div>
 </div>
 

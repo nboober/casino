@@ -1,0 +1,42 @@
+<%= link_to "Back to Admin Page", admin_path, :class => "btn btn-outline-dark btn btn-outline-dark btn-light position-absolute" %>
+<div class="background-black white-text">
+<div class="center-page background-black " style="width:80%;padding-left:5%;margin:0 auto;">
+<% if @game.errors.any? %>
+  <ul>
+    <% @game.errors.full_messages.each do |message| %>
+      <li style="list-style-type:none;"><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+
+<h2>New Game</h2>
+
+<%= form_for @game do |f| %>
+
+  <div class="form-group row">
+    <div class="col-sm-4">
+      <%= f.label :_name %>
+      <%= f.text_field :name, :placeholder => "Name", :class => "form-control"%>
+      </div>
+      
+      <div class="col-sm-4">
+      <%= f.label :cost %>
+      <%= f.text_field :cost, :placeholder => "cost", :class => "form-control" %>
+      </div>
+
+      <div class="col-sm-4">
+      <%= f.label :winnings %>
+      <%= f.text_field :winnings, :placeholder => "winnings", :class => "form-control" %>
+      </div>
+     
+      <div class="col-sm-4">
+      <%= f.collection_select :company_id, Company.all, :id, :name %>
+      </div>
+
+  <%= f.submit "Create" %>
+
+<% end %>
+
+</div>
+</div>
