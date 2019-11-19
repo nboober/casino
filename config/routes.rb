@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :companies
   resources :games
   resources :users
-  route '/', to: "application#home", as: "home"
+  root "application#home", as: "home"
 
   get "/login", to: "application#login"
   post "/login", to: "application#process_login"
