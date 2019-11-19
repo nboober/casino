@@ -22,5 +22,5 @@ mickey = User.create(first_name: "Mickey", last_name: "Partlow", age: 27, tokens
 play1 = Play.create(user_id: nick.id, game_id: wordGame.id)
 play2 = Play.create(user_id: mickey.id, game_id: numberGame.id)
 
-creditcard1 = CreditCard.create(cardnumber: 1234567812345678, expmonth: 2, expyear: 2023, securitycode: 012, user_id: nick.id)
-creditcard1 = CreditCard.create(cardnumber: 8765432187654321, expmonth: 5, expyear: 2025, securitycode: 123, user_id: mickey.id)
+creditcard1 = CreditCard.create(cardnumber: "1234567812345678", expmonth: 2, expyear: 2023, securitycode: 012, user_id: nick.id)
+creditcard1 = CreditCard.create(cardnumber: "8765432187654321", expmonth: 5, expyear: 2025, securitycode: 123, user_id: mickey.id)

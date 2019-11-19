@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2019_10_25_143433) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "companies", force: :cascade do |t|
     t.string "name"
     t.string "location"
@@ -20,7 +23,7 @@ ActiveRecord::Schema.define(version: 2019_10_25_143433) do
   end
 
   create_table "credit_cards", force: :cascade do |t|
-    t.integer "cardnumber"
+    t.string "cardnumber"
     t.integer "expmonth"
     t.integer "expyear"
     t.integer "securitycode"
