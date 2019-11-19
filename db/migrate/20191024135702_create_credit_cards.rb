@@ -1,7 +1,7 @@
 class CreateCreditCards < ActiveRecord::Migration[6.0]
   def change
     create_table :credit_cards do |t|
-      t.integer :cardnumber
+      t.string :cardnumber
       t.integer :expmonth
       t.integer :expyear
       t.integer :securitycode
